@@ -10,7 +10,7 @@ This project allows users to type a text description of an image into a clean, m
 
 🧩 Architecture
 
-![vision-weaver-ai.json](./vision-weaver-ai.json)
+![vision-wearer-ai-n8n-workflow.jpg](./vision-weaver-ai-n8n-workflow.jpg)
 
 Lovable.dev Website → n8n Webhook → OpenAI DALL·E 3 → n8n Response → Website
 Frontend (Lovable.dev)
