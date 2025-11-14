@@ -9,6 +9,9 @@ This repository contains a full-stack mini project that uses Lovable.dev to buil
 This project allows users to type a text description of an image into a clean, modern Lovable.dev‑generated web interface. When they click Generate, the website sends a POST request to an n8n webhook, which triggers an automation workflow. The workflow generates an image using OpenAI’s DALL·E 3 and returns the result directly to the website as a binary image file.
 
 🧩 Architecture
+
+![vision-weaver-ai.json](./vision-weaver-ai.json)
+
 Lovable.dev Website → n8n Webhook → OpenAI DALL·E 3 → n8n Response → Website
 Frontend (Lovable.dev)
 
