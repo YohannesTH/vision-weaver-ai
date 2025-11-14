@@ -1,6 +1,6 @@
 AI Image Generator (Lovable.dev + n8n + OpenAI DALL·E 3)
 
-![ai-image-generator.jpg](./ai-image-generator.jpg)
+![ai-image-generator.jpg](./images/ai-image-generator.jpg)
 
 This repository contains a full-stack mini project that uses Lovable.dev to build a modern web UI and n8n to provide backend automation for generating AI images using OpenAI’s DALL·E 3.
 
