@@ -1,0 +1,93 @@
+{
+  "name": "vision-weaver-ai",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "image",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "7f0feec9-d598-40b4-9e0e-05f8c0a8fa65",
+      "name": "Webhook",
+      "webhookId": "7a2b5c89-63ba-4cb0-aa83-d9f509f69acc"
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "prompt": "={{ $json.body.prompt }}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "d7cff674-e9eb-49c4-9ea8-559e59e11b06",
+      "name": "Generate an image",
+      "credentials": {
+        "openAiApi": {
+          "id": "PkEzVd0HwP1imPYv",
+          "name": "n8n free OpenAI API credits"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "binary",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        416,
+        0
+      ],
+      "id": "d88e2bd4-9f97-4155-9432-7542d25b0a8a",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Generate an image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate an image": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "a4c13731-d881-46d0-9164-cf67d635923d",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "24f20f7bd6a5ae14feabd5fbb95f725b0a6bfb8f18604c757150654ed7387b24"
+  },
+  "id": "fck7IM7LY3uoIjDD",
+  "tags": []
+}
