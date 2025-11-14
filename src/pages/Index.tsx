@@ -25,7 +25,7 @@ const Index = () => {
 
     try {
       const response = await fetch(
-        "https://yohanhailet.app.n8n.cloud/webhook-test/image",
+        "https://yohanhailet.app.n8n.cloud/webhook/image",
         {
           method: "POST",
           headers: {
